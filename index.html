@@ -2,10 +2,99 @@
 <html lang="en">
 <head>
     <title>Exercise 3</title>
+    <script src="swapi.js">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .padding{
+        margin-top: 30px;
+        }
+        </style>
 </head>
-<body>
-    <center>
-        <h1>Daftar Planet</h1>
-    </center>
+<body style="background-color: rgb(6, 136, 136)">
+        <div class="container">
+            <div class="row">
+                <div></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                        <center><h1 class="padding">Daftar Planet</h1></center>
+                        <br><input type="text" id="tampilkan" name="tampil" class="form form-control" placeholder="Filter">
+                        <br>
+                        <button id="bot" class="btn btn-warning" onclick="urut()">Filter</button>
+                        <br>
+                        <!-- <p>Minimum age: <input type="number" id="ageToCheck" value="18"></p>
+                        -->
+                        <br>
+                        <!--oninput: <span id="result"></span>
+                        <p>All ages above minimum: <span id="demo"></span></p> -->
+
+                        <script>
+                        //     tampilkan.oninput = function() {
+                        //         result.innerHTML = tampilkan.value;
+                        // };
+                            // function tampil(){
+                            //     var idInput=document.getElementById('tampilkan').value;
+                            //     document.querySelector('#result').innerHTML=idInput;
+                            //     filtered=idInput;
+                            //     console.log(filtered);
+                                
+                            // }
+
+                            // var ages = [32, 33, 12, 40];
+                            // function checkAdult(age) {
+                            // return age >= document.getElementById("ageToCheck").value;
+                            // }
+                            // function myFunction() {
+                            // document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+                            // }
+                            // function tampilkanData(){
+                            //     var inputData=document.getElementById("tampilkan").value;
+                            // }
+                            // function filterData(){
+                            //     document.getElementById("demo").innerHTML = namaPlanet.results.filter(tampilkanData);
+                            // }
+
+                        </script>
+                </div>
+                <div class="col-xs-12">
+                        <div class="table-responsive">
+                        <table class="table">
+                                <tr>
+                                    <td align="center"><h4>No</h4></td>
+                                    <td align="center"><h4>Nama Planet</h4></td>
+                                    <td align="center"><h4>Periode Rotasi</h4></td>
+                                    <td align="center"><h4>Periode Orbit</h4></td>
+                                    <td align="center"><h4>Diameter</h4></td>
+                                    <td align="center"><h4>Climate</h4></td>
+                                    <td align="center"><h4>Gravitasi</h4></td>
+                                    <td align="center"><h4>Terrain</h4></td>
+                                    <td align="center"><h4>Surface Water</h4></td>
+                                    <td align="center"><h4>Populasi</h2></td>
+                                    
+                                </tr>                           
+                                <script>
+                                    for(var i=0;i<arrayPlanetFiltered.length;i++){
+                                        document.write('<tr><td><h5>'+(i+1)+'</h5></td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].name+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].rotation_period+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].orbital_period+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].diameter+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].climate+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].gravity+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].terrain+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].surface_water+'</td>');
+                                        document.write('<td><h5>'+arrayPlanetFiltered[i].population+'</td></tr>');
+                                    }
+                                </script>
+                            </table>
+                            </div>
+                            </div>
+                            </div>
+                </div>
+
+    <br>
+    
+
+
 </body>
 </html>
